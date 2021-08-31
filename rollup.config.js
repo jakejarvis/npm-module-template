@@ -5,6 +5,7 @@ import { terser } from "rollup-plugin-terser";
 import eslint from "@rollup/plugin-eslint";
 import filesize from "rollup-plugin-filesize";
 import copy from "rollup-plugin-copy";
+import del from "rollup-plugin-delete";
 
 const banner = `/*! My Module v${pkg.version} */`;
 
@@ -37,6 +38,7 @@ export default [
       },
     ],
     plugins: [
+      del({ targets: "dist/*" }),
       copy({
         // clearly this isn't really typescript, so we need to manually copy the type definition file
         targets: [
