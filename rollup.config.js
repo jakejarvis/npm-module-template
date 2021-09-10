@@ -7,24 +7,26 @@ import filesize from "rollup-plugin-filesize";
 import copy from "rollup-plugin-copy";
 import del from "rollup-plugin-delete";
 
+const exportName = "MyModule";
+const input = "src/index.js";
 const banner = `/*! My Module v${pkg.version} */`;
 
 export default [
   {
     // universal (browser and node)
-    input: "src/index.js",
+    input,
     output: [
       {
-        name: "MyModule",
-        file: "dist/my-module.js",
+        name: exportName,
+        file: pkg.exports.browser.replace(".min.js", ".js"), // unminified (.js)
         format: "umd",
         exports: "named",
         esModule: false,
-        banner: banner,
+        banner,
       },
       {
-        name: "MyModule",
-        file: "dist/my-module.min.js",
+        name: exportName,
+        file: pkg.exports.browser, // minified (.min.js)
         format: "umd",
         exports: "named",
         esModule: false,
@@ -43,9 +45,9 @@ export default [
         // clearly this isn't really typescript, so we need to manually copy the type definition file
         targets: [
           {
-            src: "src/index.d.ts",
+            src: input.replace(".js", ".d.ts"),
             dest: "dist",
-            rename: "my-module.d.ts",
+            rename: pkg.types.replace("./dist/", ""),
           },
         ],
       }),
@@ -61,18 +63,18 @@ export default [
   },
   {
     // modules
-    input: "src/index.js",
+    input,
     output: [
       {
         // ES6 module (import)
-        file: "dist/my-module.esm.js",
+        file: pkg.exports.import,
         format: "esm",
         exports: "named",
         banner: banner,
       },
       {
         // commonjs (require)
-        file: "dist/my-module.cjs.js",
+        file: pkg.exports.require,
         format: "cjs",
         exports: "named",
         banner: banner,

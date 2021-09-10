@@ -28,14 +28,14 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "lint": "eslint src/**/*.js",
+    "lint": "eslint .",
     "test": "echo \"Tests are important. ;)\"",
     "prepublishOnly": "yarn build"
   },
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.15.0",
-    "@babel/preset-env": "^7.15.0",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
     "@jakejarvis/eslint-config": "*",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-eslint": "^8.0.1",

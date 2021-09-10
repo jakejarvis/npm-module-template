@@ -6,7 +6,8 @@ Probably not very useful to anybody else. 😊
 
 ## Examples
 
-- [@jakejarvis/dark-mode](https://github.com/jakejarvis/dark-mode)
+- [dark-mode-switcheroo](https://github.com/jakejarvis/dark-mode)
+- [simple-anchor](https://github.com/jakejarvis/simple-anchor)
 
 ## License
 
