@@ -1,9 +1,10 @@
 {
   "name": "@jakejarvis/my-module",
   "private": true,
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.0",
+  "description": "Just a personal NPM/browser module boilerplate to my liking, probably not very useful to anybody else. :)",
   "license": "MIT",
+  "homepage": "https://github.com/jakejarvis/my-module",
   "author": {
     "name": "Jake Jarvis",
     "email": "jake@jarv.is",

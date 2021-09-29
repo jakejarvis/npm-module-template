@@ -9,7 +9,7 @@ import del from "rollup-plugin-delete";
 
 const exportName = "MyModule";
 const input = "src/index.js";
-const banner = `/*! My Module v${pkg.version} */`;
+const banner = `/*! ${pkg.name} v${pkg.version} | ${pkg.license} | ${pkg.homepage} */`;
 
 export default [
   {
