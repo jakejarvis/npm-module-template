@@ -29,6 +29,7 @@
   },
   "scripts": {
     "build": "rollup -c",
+    "watch": "rollup -c -w",
     "lint": "eslint .",
     "test": "echo \"Tests are important. ;)\"",
     "prepublishOnly": "yarn build"
