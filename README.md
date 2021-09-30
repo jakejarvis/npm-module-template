@@ -8,7 +8,25 @@ Just a personal boilerplate to my liking for an Node and/or browser module w/ ES
 
 Probably not very useful to anybody else. 😊
 
+The rest of the readme from now on is placeholder crap...
+
+## Install
+
+```sh
+npm install @jakejarvis/my-module --save-dev
+# or...
+yarn add @jakejarvis/my-module --dev
+```
+
 ## Usage
+
+```js
+import { something } from "@jakejarvis/my-module";
+
+something({ doSomething: true });
+```
+
+## API
 
 ### something(options?)
 

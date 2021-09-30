@@ -9,5 +9,12 @@ export interface Options {
 
 /**
  * Does pretty much nothing, contrary to its name.
+ *
+ * @example
+ * ```
+ * import { something } from "@jakejarvis/my-module";
+ *
+ * something({ doSomething: true });
+ * ```
  */
 export function something(options?: Options): void;
