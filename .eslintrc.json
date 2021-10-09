@@ -12,7 +12,6 @@
   },
   "ignorePatterns": [
     "*.d.ts",
-    "dist/**",
-    "rollup.config.js"
+    "dist/**"
   ]
 }
